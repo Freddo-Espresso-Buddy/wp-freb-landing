@@ -5,9 +5,9 @@ services:
     restart: always
     env_file: ./.env
     environment:
-      VIRTUAL_HOST: ${WP_DOMAIN}
+      VIRTUAL_HOST: ${WP_DOMAIN},${WP_DOMAIN_2}
       VIRTUAL_PORT: ${WP_PORT}
-      LETSENCRYPT_HOST: ${WP_DOMAIN}
+      LETSENCRYPT_HOST: ${WP_DOMAIN},${WP_DOMAIN_2}
       LETSENCRYPT_EMAIL: ${LETS_ENCRYPT_EMAIL}
       WORDPRESS_DB_HOST: ${WP_DB_HOST}
       WORDPRESS_DB_USER: ${WP_DB_USER}
